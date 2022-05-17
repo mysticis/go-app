@@ -50,7 +50,7 @@ func createUser(t *testing.T) demo.User {
 
 func TestCreateUser(t *testing.T) {
 
-	//cleanup database
+	//initialize database
 	err := testQueries.DeleteAllUsers(context.Background())
 
 	require.NoError(t, err)
@@ -76,6 +76,7 @@ func TestCreateUser(t *testing.T) {
 
 func TestGetUser(t *testing.T) {
 
+	//initialize DB
 	err := testQueries.DeleteAllUsers(context.Background())
 
 	require.NoError(t, err)
@@ -96,6 +97,7 @@ func TestGetUser(t *testing.T) {
 
 func TestUpdateUser(t *testing.T) {
 
+	//initialize DB
 	err := testQueries.DeleteAllUsers(context.Background())
 
 	require.NoError(t, err)
@@ -124,6 +126,7 @@ func TestUpdateUser(t *testing.T) {
 
 func TestDeleteUser(t *testing.T) {
 
+	//initialize DB
 	err := testQueries.DeleteAllUsers(context.Background())
 
 	require.NoError(t, err)
@@ -146,6 +149,7 @@ func TestDeleteUser(t *testing.T) {
 
 func TestListUsers(t *testing.T) {
 
+	//initialize DB
 	err := testQueries.DeleteAllUsers(context.Background())
 
 	require.NoError(t, err)
